@@ -286,16 +286,29 @@ p.code-line {
 }
 .card-head-text { min-width: 0; flex: 1; }
 
+.card-portrait-wrap {
+  text-align: center;
+  margin: 0 0 14px;
+}
 .card-portrait {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  flex: none;
+  width: 118px;
+  height: auto;
+  border-radius: 16px;
   border: 2px solid var(--brass);
-  box-shadow: 0 0 0 4px var(--char), 0 0 14px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
   object-fit: cover;
+  display: inline-block;
 }
 .card.magic .card-portrait { border-color: var(--magicite); }
+
+.card.card-portrait-top > h4,
+.card.card-portrait-top > .meta {
+  text-align: center;
+}
+.card.card-portrait-top > .card-bio,
+.card.card-portrait-top > .tag-row {
+  text-align: left;
+}
 
 .card h4 {
   font-family: var(--font-display);
