@@ -328,8 +328,9 @@ blockquote.rider-quote {
   letter-spacing: 2px;
   fill: var(--rust);
 }
-.field-stamp .stamp-mark { fill: var(--rust); opacity: 0.94; }
-.field-stamp .stamp-mark-line { fill: none; stroke: var(--rust); opacity: 0.94; }
+.field-stamp .stamp-gem .gem-body { fill: var(--magicite); opacity: 0.95; }
+.field-stamp .stamp-gem .gem-facet { stroke: var(--magicite-dim); stroke-width: 1.6; fill: none; opacity: 0.9; }
+.field-stamp .stamp-gem .gem-shine { fill: var(--bone); opacity: 0.3; }
 
 @media (max-width: 480px) {
   .field-stamp { float: none; margin: 0 0 14px; }
