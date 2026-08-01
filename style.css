@@ -710,6 +710,21 @@ footer.site-footer {
 }
 
 /* ---------------------------------------------------------
+   Session illustrations
+   --------------------------------------------------------- */
+
+.session-figure {
+  margin: 28px 0;
+}
+.session-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(207,154,76,0.25);
+  box-shadow: 0 12px 34px rgba(0,0,0,0.5);
+}
+
+/* ---------------------------------------------------------
    Relationship web diagram
    --------------------------------------------------------- */
 
