@@ -131,9 +131,13 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
    --------------------------------------------------------- */
 
 .hero {
-  padding: 70px 0 60px;
+  padding: 56px 0 40px;
   border-bottom: 1px dashed rgba(207,154,76,0.3);
   position: relative;
+}
+
+.hero.hero-featured {
+  padding: 70px 0 60px;
   overflow: hidden;
   min-height: 440px;
   display: flex;
@@ -207,7 +211,7 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
 }
 
 @media (max-width: 720px) {
-  .hero { min-height: 0; }
+  .hero.hero-featured { min-height: 0; }
   .hero-art .layer-sharp { display: none; }
   .hero-art .layer-blur { opacity: 0.5; }
   .hero-art::after {
