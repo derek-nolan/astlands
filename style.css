@@ -233,16 +233,18 @@ blockquote.rider-quote {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 18px;
-  margin: 22px 0 10px;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 28px 24px;
+  margin: 26px 0 10px;
 }
 
 .card {
   background: var(--leather);
   border: 1px solid rgba(207,154,76,0.16);
-  padding: 20px 22px;
+  padding: 22px 24px 20px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .card::before {
   content: "";
@@ -253,12 +255,20 @@ blockquote.rider-quote {
 }
 .card.magic::before { background: var(--magicite-dim); }
 
+.card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.card-head-text { min-width: 0; flex: 1; }
+
 .card-portrait {
-  width: 84px;
-  height: 84px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  float: right;
-  margin: 0 0 10px 14px;
+  flex: none;
   border: 2px solid var(--brass);
   box-shadow: 0 0 0 4px var(--char), 0 0 14px rgba(0,0,0,0.5);
   object-fit: cover;
@@ -268,19 +278,19 @@ blockquote.rider-quote {
 .card h4 {
   font-family: var(--font-display);
   font-size: 1.25rem;
+  line-height: 1.15;
   color: var(--bone);
-  margin: 0 0 2px;
+  margin: 0 0 6px;
   letter-spacing: 0.01em;
 }
 
 .card .card-bio {
-  margin: 0;
+  margin: 0 0 12px;
   color: var(--bone-dim);
   font-size: 0.95rem;
-  line-height: 1.65;
-  font-style: italic;
+  line-height: 1.68;
 }
-.card .card-bio strong { color: var(--bone); font-weight: 600; font-style: normal; }
+.card .card-bio strong { color: var(--bone); font-weight: 600; }
 
 .class-icon {
   width: 13px;
@@ -297,12 +307,12 @@ blockquote.rider-quote {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--brass);
-  margin-bottom: 12px;
+  line-height: 1.6;
 }
 .card .meta .sep { color: var(--bone-dim); margin: 0 6px; }
 
 .card ul {
-  margin: 0;
+  margin: 0 0 16px;
   padding-left: 1.1em;
   color: var(--bone-dim);
   font-size: 0.95rem;
@@ -310,7 +320,8 @@ blockquote.rider-quote {
 .card ul li { margin-bottom: 6px; }
 
 .card .tag-row {
-  margin-top: 12px;
+  margin-top: auto;
+  padding-top: 12px;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -323,7 +334,14 @@ blockquote.rider-quote {
   color: var(--char);
   background: var(--brass);
   padding: 3px 8px;
+  display: inline-block;
 }
+a.tag {
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.12s, transform 0.12s;
+}
+a.tag:hover { background: var(--rust); color: var(--bone); transform: translateY(-1px); }
 .tag.status-dead { background: var(--danger); color: var(--bone); }
 .tag.status-unknown { background: var(--bone-dim); }
 
@@ -539,7 +557,14 @@ details.journal-toggle summary:hover { color: var(--rust); }
    --------------------------------------------------------- */
 
 .entry-list { margin: 0 0 30px; }
-.entry-list .item { padding: 16px 0; border-bottom: 1px solid rgba(207,154,76,0.12); }
+.entry-list .item { padding: 16px 0; border-bottom: 1px solid rgba(207,154,76,0.12); scroll-margin-top: 24px; }
+.entry-list .item:target {
+  animation: target-glow 2.2s ease-out 1;
+}
+@keyframes target-glow {
+  0% { background: rgba(193,85,42,0.18); }
+  100% { background: transparent; }
+}
 .entry-list .item h4 {
   font-family: var(--font-display);
   font-size: 1.15rem;
