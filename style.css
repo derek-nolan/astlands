@@ -327,15 +327,6 @@ p.code-line {
 }
 .card .card-bio strong { color: var(--bone); font-weight: 600; }
 
-.class-icon {
-  width: 13px;
-  height: 13px;
-  vertical-align: -2px;
-  margin-right: 3px;
-  color: var(--brass);
-}
-.card.magic .class-icon { color: var(--magicite); }
-
 .card .meta {
   font-family: var(--font-mono);
   font-size: 0.72rem;
