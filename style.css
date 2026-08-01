@@ -273,6 +273,24 @@ blockquote.rider-quote {
   letter-spacing: 0.01em;
 }
 
+.card .card-bio {
+  margin: 0;
+  color: var(--bone-dim);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  font-style: italic;
+}
+.card .card-bio strong { color: var(--bone); font-weight: 600; font-style: normal; }
+
+.class-icon {
+  width: 13px;
+  height: 13px;
+  vertical-align: -2px;
+  margin-right: 3px;
+  color: var(--brass);
+}
+.card.magic .class-icon { color: var(--magicite); }
+
 .card .meta {
   font-family: var(--font-mono);
   font-size: 0.72rem;
