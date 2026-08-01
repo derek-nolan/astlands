@@ -149,6 +149,7 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 .hero-art img {
   position: absolute;
@@ -159,22 +160,32 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
   object-position: 68% 42%;
 }
 .hero-art .layer-blur {
-  filter: blur(22px) brightness(0.3) saturate(0.85) sepia(0.12);
-  opacity: 0.85;
-  transform: scale(1.08);
+  filter: blur(40px) brightness(0.24) saturate(0.7) sepia(0.15);
+  opacity: 0.7;
+  transform: scale(1.2);
 }
 .hero-art .layer-sharp {
-  filter: brightness(0.6) contrast(1.08) saturate(0.85) sepia(0.08);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, rgba(0,0,0,0.55) 52%, black 76%);
-          mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, rgba(0,0,0,0.55) 52%, black 76%);
+  filter: brightness(0.8) contrast(1.15) saturate(1.05) sepia(0.05);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 38%, black 62%, black 100%);
+          mask-image: linear-gradient(90deg, transparent 0%, transparent 38%, black 62%, black 100%);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+.hero-art .seam-glow {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 35%;
+  width: 30%;
+  background: radial-gradient(ellipse 60% 90% at 50% 50%, rgba(207,154,76,0.16), transparent 70%);
+  filter: blur(6px);
 }
 .hero-art::after {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, var(--char) 0%, rgba(22,19,15,0.82) 22%, rgba(22,19,15,0.35) 45%, transparent 65%),
-    linear-gradient(0deg, var(--char) 0%, transparent 30%);
+    linear-gradient(90deg, var(--char) 0%, rgba(22,19,15,0.9) 20%, rgba(22,19,15,0.55) 38%, transparent 58%),
+    linear-gradient(0deg, var(--char) 0%, transparent 32%);
 }
 
 .hero .eyebrow,
