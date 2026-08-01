@@ -424,6 +424,32 @@ a.tag {
 a.tag:hover { background: var(--rust); color: var(--bone); transform: translateY(-1px); }
 .tag.status-dead { background: var(--danger); color: var(--bone); }
 .tag.status-unknown { background: var(--bone-dim); }
+.tag.status-open { background: var(--rust); color: var(--bone); }
+.tag.status-resolved { background: var(--magicite); color: var(--char); }
+
+.thread-list .item { display: flex; align-items: flex-start; gap: 14px; }
+.thread-list .item .check {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--magicite-dim);
+  color: var(--magicite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  margin-top: 3px;
+}
+.thread-list .item .item-body { flex: 1; min-width: 0; }
+.thread-list .item .item-body .thread-meta {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 4px;
+}
 
 /* ---------------------------------------------------------
    Session log entries
@@ -688,12 +714,14 @@ details.flashback .flashback-body p:last-child { margin-bottom: 0; }
 .entry-list .item:target,
 .card:target,
 details.journal-toggle:target,
-.session-entry:target {
+.session-entry:target,
+.thread-list .item:target {
   animation: target-glow 2.2s ease-out 1;
 }
 .card { scroll-margin-top: 24px; }
 details.journal-toggle { scroll-margin-top: 24px; }
 .session-entry { scroll-margin-top: 24px; }
+.thread-list .item { scroll-margin-top: 24px; }
 @keyframes target-glow {
   0% { box-shadow: inset 0 0 0 2px var(--rust), 0 0 24px rgba(193,85,42,0.35); }
   100% { box-shadow: inset 0 0 0 2px transparent, 0 0 0 rgba(193,85,42,0); }
