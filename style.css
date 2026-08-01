@@ -439,6 +439,32 @@ a.tag:hover { background: var(--rust); color: var(--bone); transform: translateY
   color: var(--rust);
   border-color: var(--rust);
 }
+
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 40;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--bone-dim);
+  background: var(--leather);
+  border: 1px solid rgba(207,154,76,0.3);
+  padding: 9px 13px;
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity 0.15s, color 0.15s, border-color 0.15s;
+}
+.back-to-top:hover {
+  opacity: 1;
+  color: var(--brass);
+  border-color: var(--brass);
+}
+
+@media (max-width: 480px) {
+  .back-to-top { right: 12px; bottom: 12px; padding: 8px 11px; font-size: 0.64rem; }
+}
 .field-stamp svg { display: block; width: 100%; height: 100%; }
 .field-stamp .stamp-border-outer {
   fill: none;
@@ -1065,6 +1091,8 @@ footer.site-footer {
   .divider,
   a.tag,
   .search-widget,
+  .session-jump,
+  .back-to-top,
   .print-hide {
     display: none !important;
   }
