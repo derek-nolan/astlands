@@ -150,12 +150,64 @@
       <div class="field-stamp">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <path id="s5-top-arc" d="M 32,105 A 68,68 0 0 1 168,105" />
-            <path id="s5-bottom-arc" d="M 168,100 A 68,68 0 0 1 32,100" />
+            <path id="s5-top-arc" d="M 29,107 A 72,72 0 0 1 171,107" />
+            <path id="s5-bottom-arc" d="M 171,100 A 72,72 0 0 1 29,100" />
+            <filter id="s5-grunge" x="-30%" y="-30%" width="160%" height="160%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="6" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.4" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
           </defs>
 
-          <circle class="stamp-ring outer" cx="100" cy="100" r="92" stroke-width="4" />
-          <circle class="stamp-ring inner" cx="100" cy="100" r="78" />
+          <polygon class="stamp-teeth" points="195.0,100.0 179.5,109.0 192.6,121.1 175.5,126.4 185.6,141.2 167.7,142.6 174.3,159.2 156.6,156.6 159.2,174.3 142.6,167.7 141.2,185.6 126.4,175.5 121.1,192.6 109.0,179.5 100.0,195.0 91.0,179.5 78.9,192.6 73.6,175.5 58.8,185.6 57.4,167.7 40.8,174.3 43.4,156.6 25.7,159.2 32.3,142.6 14.4,141.2 24.5,126.4 7.4,121.1 20.5,109.0 5.0,100.0 20.5,91.0 7.4,78.9 24.5,73.6 14.4,58.8 32.3,57.4 25.7,40.8 43.4,43.4 40.8,25.7 57.4,32.3 58.8,14.4 73.6,24.5 78.9,7.4 91.0,20.5 100.0,5.0 109.0,20.5 121.1,7.4 126.4,24.5 141.2,14.4 142.6,32.3 159.2,25.7 156.6,43.4 174.3,40.8 167.7,57.4 185.6,58.8 175.5,73.6 192.6,78.9 179.5,91.0" filter="url(#s5-grunge)" />
+          <circle class="stamp-ring outer" cx="100" cy="100" r="74" filter="url(#s5-grunge)" />
+          <circle class="stamp-ring inner" cx="100" cy="100" r="68" filter="url(#s5-grunge)" />
+
+          <circle cx="22.6" cy="123.9" r="2.1" fill="var(--rust)" opacity="0.34" />
+            <circle cx="18.1" cy="96.0" r="0.8" fill="var(--rust)" opacity="0.35" />
+            <circle cx="39.1" cy="35.2" r="0.7" fill="var(--rust)" opacity="0.27" />
+            <circle cx="175.4" cy="148.3" r="1.7" fill="var(--rust)" opacity="0.17" />
+            <circle cx="194.2" cy="89.4" r="1.6" fill="var(--rust)" opacity="0.40" />
+            <circle cx="134.3" cy="152.2" r="1.4" fill="var(--rust)" opacity="0.17" />
+            <circle cx="125.8" cy="165.3" r="0.6" fill="var(--rust)" opacity="0.34" />
+            <circle cx="15.6" cy="133.1" r="1.4" fill="var(--rust)" opacity="0.41" />
+            <circle cx="15.5" cy="100.1" r="1.3" fill="var(--rust)" opacity="0.26" />
+            <circle cx="195.8" cy="98.6" r="1.9" fill="var(--rust)" opacity="0.43" />
+            <circle cx="72.2" cy="164.0" r="1.0" fill="var(--rust)" opacity="0.18" />
+            <circle cx="107.7" cy="24.8" r="1.9" fill="var(--rust)" opacity="0.30" />
+            <circle cx="187.7" cy="76.3" r="0.5" fill="var(--rust)" opacity="0.23" />
+            <circle cx="165.9" cy="58.3" r="2.2" fill="var(--rust)" opacity="0.31" />
+            <circle cx="174.8" cy="136.9" r="1.8" fill="var(--rust)" opacity="0.26" />
+            <circle cx="162.6" cy="138.2" r="2.1" fill="var(--rust)" opacity="0.45" />
+            <circle cx="151.9" cy="147.5" r="0.7" fill="var(--rust)" opacity="0.17" />
+            <circle cx="119.8" cy="34.9" r="1.5" fill="var(--rust)" opacity="0.33" />
+            <circle cx="131.6" cy="180.9" r="0.7" fill="var(--rust)" opacity="0.41" />
+            <circle cx="156.8" cy="151.0" r="0.9" fill="var(--rust)" opacity="0.26" />
+            <circle cx="187.8" cy="83.8" r="1.0" fill="var(--rust)" opacity="0.50" />
+            <circle cx="118.4" cy="173.1" r="2.0" fill="var(--rust)" opacity="0.41" />
+            <circle cx="177.3" cy="156.4" r="0.9" fill="var(--rust)" opacity="0.25" />
+            <circle cx="110.4" cy="27.6" r="1.0" fill="var(--rust)" opacity="0.18" />
+            <circle cx="169.0" cy="143.9" r="0.9" fill="var(--rust)" opacity="0.39" />
+            <circle cx="46.4" cy="155.9" r="2.1" fill="var(--rust)" opacity="0.34" />
+            <circle cx="18.4" cy="58.7" r="0.8" fill="var(--rust)" opacity="0.21" />
+            <circle cx="175.3" cy="51.1" r="0.9" fill="var(--rust)" opacity="0.23" />
+            <circle cx="93.8" cy="6.2" r="0.8" fill="var(--rust)" opacity="0.53" />
+            <circle cx="160.9" cy="44.3" r="1.2" fill="var(--rust)" opacity="0.19" />
+            <circle cx="191.9" cy="122.8" r="0.9" fill="var(--rust)" opacity="0.43" />
+            <circle cx="96.1" cy="189.9" r="1.5" fill="var(--rust)" opacity="0.27" />
+            <circle cx="139.1" cy="177.2" r="0.6" fill="var(--rust)" opacity="0.24" />
+            <circle cx="15.3" cy="66.8" r="1.5" fill="var(--rust)" opacity="0.26" />
+            <circle cx="159.8" cy="65.8" r="0.5" fill="var(--rust)" opacity="0.26" />
+            <circle cx="39.6" cy="121.4" r="0.8" fill="var(--rust)" opacity="0.30" />
+            <circle cx="40.2" cy="70.9" r="1.1" fill="var(--rust)" opacity="0.51" />
+            <circle cx="183.7" cy="89.7" r="1.7" fill="var(--rust)" opacity="0.38" />
+            <circle cx="140.2" cy="148.8" r="0.5" fill="var(--rust)" opacity="0.51" />
+            <circle cx="71.3" cy="9.7" r="0.5" fill="var(--rust)" opacity="0.40" />
+            <circle cx="13.7" cy="109.7" r="1.0" fill="var(--rust)" opacity="0.55" />
+            <circle cx="171.7" cy="136.7" r="1.8" fill="var(--rust)" opacity="0.51" />
+            <circle cx="93.0" cy="14.4" r="1.8" fill="var(--rust)" opacity="0.52" />
+            <circle cx="49.1" cy="168.4" r="2.0" fill="var(--rust)" opacity="0.50" />
+            <circle cx="22.9" cy="144.2" r="2.0" fill="var(--rust)" opacity="0.38" />
+            <circle cx="47.0" cy="47.0" r="1.5" fill="var(--rust)" opacity="0.39" />
 
           <text class="stamp-text">
             <textPath href="#s5-top-arc" startOffset="50%" text-anchor="middle">LIVERPOOL</textPath>
@@ -164,36 +216,27 @@
             <textPath href="#s5-bottom-arc" startOffset="50%" text-anchor="middle">IN PERSON</textPath>
           </text>
 
-          <!-- small flanking stars, echoing a postmark -->
-          <path class="stamp-star" d="M40,100 l2.4,5 5.5,0.5 -4,3.8 1.2,5.4 -4.9,-2.9 -4.9,2.9 1.2,-5.4 -4,-3.8 5.5,-0.5 Z" />
-          <path class="stamp-star" d="M160,100 l2.4,5 5.5,0.5 -4,3.8 1.2,5.4 -4.9,-2.9 -4.9,2.9 1.2,-5.4 -4,-3.8 5.5,-0.5 Z" />
-
           <!-- centre mark: the horned rider on a giant bat -->
-          <g class="stamp-mark" transform="translate(100,102)">
-            <!-- wings -->
+          <g class="stamp-mark" transform="translate(100,102)" filter="url(#s5-grunge)">
             <path d="M -8,-4
-                     C -20,-14 -32,-10 -46,-20
-                     C -36,-8 -40,-2 -50,2
-                     C -38,4 -34,10 -42,16
-                     C -28,12 -20,10 -10,2
+                     C -22,-15 -35,-11 -50,-22
+                     C -39,-9 -43,-2 -54,3
+                     C -41,5 -37,12 -46,18
+                     C -30,13 -21,11 -10,2
                      Z" />
             <path d="M 8,-4
-                     C 20,-14 32,-10 46,-20
-                     C 36,-8 40,-2 50,2
-                     C 38,4 34,10 42,16
-                     C 28,12 20,10 10,2
+                     C 22,-15 35,-11 50,-22
+                     C 39,-9 43,-2 54,3
+                     C 41,5 37,12 46,18
+                     C 30,13 21,11 10,2
                      Z" />
-            <!-- bat body -->
-            <ellipse cx="0" cy="4" rx="7" ry="11" />
-            <!-- rider silhouette -->
-            <circle cx="0" cy="-11" r="4.2" />
-            <path d="M -4,-3 Q 0,3 4,-3 L 3,6 Q 0,9 -3,6 Z" />
-            <!-- raised arm and trident -->
-            <path class="stamp-mark-line" style="stroke-width:1.8" d="M 3,-8 L 13,-22" stroke-linecap="round" />
-            <path class="stamp-mark-line" style="stroke-width:1.4" d="M 13,-22 L 9,-27 M 13,-22 L 13,-28 M 13,-22 L 17,-27" stroke-linecap="round" />
-            <!-- little horns -->
-            <path d="M -3,-14 L -6,-19 L -1.5,-15.5 Z" />
-            <path d="M 3,-14 L 6,-19 L 1.5,-15.5 Z" />
+            <ellipse cx="0" cy="4" rx="7.5" ry="12" />
+            <circle cx="0" cy="-12" r="4.6" />
+            <path d="M -4.4,-3 Q 0,3.5 4.4,-3 L 3.4,7 Q 0,10 -3.4,7 Z" />
+            <path class="stamp-mark-line" style="stroke-width:2" d="M 3,-8 L 14,-24" stroke-linecap="round" />
+            <path class="stamp-mark-line" style="stroke-width:1.6" d="M 14,-24 L 9,-30 M 14,-24 L 14,-31 M 14,-24 L 19,-30" stroke-linecap="round" />
+            <path d="M -3.3,-15 L -7,-21 L -1.5,-17 Z" />
+            <path d="M 3.3,-15 L 7,-21 L 1.5,-17 Z" />
           </g>
         </svg>
       </div>
