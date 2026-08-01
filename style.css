@@ -406,6 +406,39 @@ a.tag:hover { background: var(--rust); color: var(--bone); transform: translateY
   transform: rotate(-3deg);
 }
 .prose.clear-stamp { padding-top: 14px; }
+
+.session-jump {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 0 8px;
+  border-bottom: 1px dashed rgba(207,154,76,0.22);
+  margin-bottom: 8px;
+}
+.session-jump-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  margin-right: 4px;
+}
+.session-jump a {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--brass);
+  border: 1px solid rgba(207,154,76,0.35);
+  padding: 6px 12px;
+  text-decoration: none;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.session-jump a:hover {
+  background: rgba(193,85,42,0.14);
+  color: var(--rust);
+  border-color: var(--rust);
+}
 .field-stamp svg { display: block; width: 100%; height: 100%; }
 .field-stamp .stamp-border-outer {
   fill: none;
