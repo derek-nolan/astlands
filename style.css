@@ -253,6 +253,18 @@ blockquote.rider-quote {
 }
 .card.magic::before { background: var(--magicite-dim); }
 
+.card-portrait {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  float: right;
+  margin: 0 0 10px 14px;
+  border: 2px solid var(--brass);
+  box-shadow: 0 0 0 4px var(--char), 0 0 14px rgba(0,0,0,0.5);
+  object-fit: cover;
+}
+.card.magic .card-portrait { border-color: var(--magicite); }
+
 .card h4 {
   font-family: var(--font-display);
   font-size: 1.25rem;
