@@ -1,0 +1,417 @@
+/* =========================================================
+   THE ASTLANDS — campaign chronicle
+   A ledger from a dying desert town: rust, brass, magicite.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Special+Elite&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --char:      #16130f;   /* charred umber — page background */
+  --char-2:    #1e1a14;   /* panel background, slightly lifted */
+  --leather:   #2c251c;   /* card / border background */
+  --bone:      #e8ddc7;   /* sand / bone — primary text */
+  --bone-dim:  #b8ab8f;   /* muted body text */
+  --rust:      #c1552a;   /* clay / dried blood — primary accent */
+  --rust-dim:  #7a3a20;
+  --brass:     #cf9a4c;   /* brass / dust-gold — dividers, labels */
+  --magicite:  #6ea39c;   /* teal glow — magic, quotes, highlights */
+  --magicite-dim: #3f5f5a;
+  --danger:    #8a2a1f;
+
+  --font-display: 'Rye', serif;
+  --font-body: 'Vollkorn', Georgia, serif;
+  --font-type: 'Special Elite', 'Courier New', monospace;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at top, rgba(193,85,42,0.06), transparent 60%),
+    var(--char);
+  color: var(--bone);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* faint grain / grit texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.05;
+  background-image:
+    repeating-linear-gradient(0deg, #000 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, #000 0 1px, transparent 1px 3px);
+  mix-blend-mode: overlay;
+}
+
+a { color: var(--rust); text-decoration: none; }
+a:hover { color: var(--brass); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--magicite);
+  outline-offset: 3px;
+}
+
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------------------------------------------------------
+   Header / nav
+   --------------------------------------------------------- */
+
+.site-header {
+  border-bottom: 1px solid rgba(207,154,76,0.25);
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), transparent);
+  padding: 30px 0 0;
+}
+
+.brand-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 18px;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  letter-spacing: 0.06em;
+  color: var(--bone);
+  text-shadow: 0 0 18px rgba(193,85,42,0.35);
+}
+.brand span { color: var(--rust); }
+
+.brand-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brass);
+  opacity: 0.85;
+}
+
+nav.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  border-top: 1px solid rgba(207,154,76,0.2);
+}
+
+nav.main-nav a {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  padding: 12px 16px;
+  border-right: 1px solid rgba(207,154,76,0.12);
+  transition: background 0.15s, color 0.15s;
+}
+nav.main-nav a:hover { background: rgba(193,85,42,0.12); color: var(--brass); }
+nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
+
+/* ---------------------------------------------------------
+   Hero (index page)
+   --------------------------------------------------------- */
+
+.hero {
+  padding: 56px 0 40px;
+  border-bottom: 1px dashed rgba(207,154,76,0.3);
+  position: relative;
+}
+
+.hero .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--magicite);
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 7vw, 4.4rem);
+  line-height: 1.02;
+  margin: 0 0 20px;
+  color: var(--bone);
+}
+
+.hero .lede {
+  max-width: 62ch;
+  font-size: 1.15rem;
+  color: var(--bone-dim);
+}
+
+/* rusted magicite divider — the signature element */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 46px 0 34px;
+  color: var(--brass);
+}
+.divider::before, .divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(207,154,76,0.5), transparent);
+}
+.divider .gem {
+  width: 9px; height: 9px;
+  background: var(--magicite);
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px 2px rgba(110,163,156,0.6);
+  flex: none;
+}
+
+/* ---------------------------------------------------------
+   Prose / section blocks
+   --------------------------------------------------------- */
+
+section.block { padding: 6px 0 44px; }
+
+h2.section-title {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--rust);
+  letter-spacing: 0.02em;
+  margin: 0 0 22px;
+}
+
+h3.sub-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--brass);
+  margin: 0 0 10px;
+}
+
+.prose p { margin: 0 0 1.1em; color: var(--bone-dim); }
+.prose strong { color: var(--bone); font-weight: 600; }
+.prose em { color: var(--brass); font-style: italic; }
+
+blockquote.rider-quote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--magicite);
+  border-left: 3px solid var(--magicite-dim);
+  padding: 6px 0 6px 20px;
+  margin: 28px 0;
+}
+
+/* ---------------------------------------------------------
+   Cards (characters, NPCs, locations)
+   --------------------------------------------------------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+  margin: 22px 0 10px;
+}
+
+.card {
+  background: var(--leather);
+  border: 1px solid rgba(207,154,76,0.16);
+  padding: 20px 22px;
+  position: relative;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--rust-dim);
+}
+.card.magic::before { background: var(--magicite-dim); }
+
+.card h4 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--bone);
+  margin: 0 0 2px;
+  letter-spacing: 0.01em;
+}
+
+.card .meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 12px;
+}
+.card .meta .sep { color: var(--bone-dim); margin: 0 6px; }
+
+.card ul {
+  margin: 0;
+  padding-left: 1.1em;
+  color: var(--bone-dim);
+  font-size: 0.95rem;
+}
+.card ul li { margin-bottom: 6px; }
+
+.card .tag-row {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--char);
+  background: var(--brass);
+  padding: 3px 8px;
+}
+.tag.status-dead { background: var(--danger); color: var(--bone); }
+.tag.status-unknown { background: var(--bone-dim); }
+
+/* ---------------------------------------------------------
+   Session log entries
+   --------------------------------------------------------- */
+
+.session-entry {
+  padding: 34px 0;
+  border-bottom: 1px dashed rgba(207,154,76,0.22);
+}
+.session-entry:first-of-type { padding-top: 0; }
+
+.session-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--magicite);
+}
+
+.session-entry h3 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--bone);
+  margin: 6px 0 16px;
+}
+
+.session-entry .prose p { margin-bottom: 1em; }
+
+/* ---------------------------------------------------------
+   Journal / typewriter pages (Professor Godt's notes)
+   --------------------------------------------------------- */
+
+.journal {
+  background: #12100c;
+  border: 1px solid rgba(138,42,31,0.4);
+  padding: 26px 28px;
+  margin: 20px 0 30px;
+  position: relative;
+}
+.journal::after {
+  content: "SUBJECT FILE";
+  position: absolute;
+  top: 14px; right: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  padding: 2px 6px;
+  transform: rotate(3deg);
+  opacity: 0.75;
+}
+.journal h4 {
+  font-family: var(--font-type);
+  color: var(--rust);
+  font-size: 1.05rem;
+  margin: 0 0 14px;
+  letter-spacing: 0.02em;
+}
+.journal .entry {
+  font-family: var(--font-type);
+  color: var(--bone-dim);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.journal .entry .day {
+  color: var(--brass);
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+}
+
+details.journal-toggle summary {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brass);
+  padding: 10px 0;
+}
+details.journal-toggle summary:hover { color: var(--rust); }
+
+/* ---------------------------------------------------------
+   Simple def-list style (races, items, lore)
+   --------------------------------------------------------- */
+
+.entry-list { margin: 0 0 30px; }
+.entry-list .item { padding: 16px 0; border-bottom: 1px solid rgba(207,154,76,0.12); }
+.entry-list .item h4 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--brass);
+  margin: 0 0 6px;
+}
+.entry-list .item p { margin: 0; color: var(--bone-dim); }
+
+/* ---------------------------------------------------------
+   Footer
+   --------------------------------------------------------- */
+
+footer.site-footer {
+  margin-top: 40px;
+  padding: 30px 0 60px;
+  border-top: 1px solid rgba(207,154,76,0.18);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--bone-dim);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+
+@media (max-width: 620px) {
+  body { font-size: 16.5px; }
+  .wrap { padding: 0 18px; }
+  nav.main-nav a { padding: 10px 12px; font-size: 0.72rem; }
+  .hero { padding: 40px 0 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
