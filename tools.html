@@ -15,6 +15,10 @@
         <div class="brand">THE <span>ASTLANDS</span></div>
         <div class="brand-tag">A Campaign Chronicle · The Blighted West</div>
       </div>
+      <div class="search-widget print-hide">
+        <input type="search" id="site-search" placeholder="Search the Astlands..." autocomplete="off" aria-label="Search the site">
+        <div class="search-results" id="search-results"></div>
+      </div>
     </div>
     <nav class="main-nav">
       <a href="index.html">Story So Far</a>
@@ -24,6 +28,7 @@
       <a href="world.html">The World</a>
       <a href="lore.html">Lore &amp; Journals</a>
       <a href="quests.html">Quests &amp; Threads</a>
+      <a href="recap.html">Previously On</a>
       <a href="tools.html">Tools</a>
     </nav>
   </div>
@@ -57,12 +62,113 @@
     </div>
   </section>
 
+  <div class="divider"><div class="gem"></div><div class="gem"></div></div>
+
+  <section class="block">
+    <h2 class="section-title">Dice</h2>
+    <div class="dice-roller">
+
+      <div class="dice-buttons">
+        <button class="die-btn" data-sides="4">d4</button>
+        <button class="die-btn" data-sides="6">d6</button>
+        <button class="die-btn" data-sides="8">d8</button>
+        <button class="die-btn" data-sides="10">d10</button>
+        <button class="die-btn" data-sides="12">d12</button>
+        <button class="die-btn" data-sides="20">d20</button>
+        <button class="die-btn" data-sides="100">d100</button>
+      </div>
+
+      <div class="dice-custom">
+        <input type="number" id="dice-count" value="1" min="1" max="20" aria-label="Number of dice">
+        <span class="dice-x">d</span>
+        <select id="dice-sides" aria-label="Die sides">
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
+          <option value="20" selected>20</option>
+          <option value="100">100</option>
+        </select>
+        <span class="dice-x">+</span>
+        <input type="number" id="dice-mod" value="0" aria-label="Modifier">
+        <button id="dice-roll-custom" type="button">Roll</button>
+      </div>
+
+      <div class="dice-result" id="dice-result">
+        <div class="dice-result-value" id="dice-result-value">—</div>
+        <div class="dice-result-detail" id="dice-result-detail">Roll something.</div>
+      </div>
+
+      <div class="dice-history" id="dice-history"></div>
+
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer wrap">
   <span>The Astlands — a home campaign chronicle</span>
   <span>Session 10 and counting</span>
 </footer>
+
+<script>
+(function () {
+  var historyEl = document.getElementById('dice-history');
+  var valueEl = document.getElementById('dice-result-value');
+  var detailEl = document.getElementById('dice-result-detail');
+  var history = [];
+
+  function roll(sides) { return 1 + Math.floor(Math.random() * sides); }
+
+  function showResult(count, sides, mod, rolls) {
+    var sum = rolls.reduce(function (a, b) { return a + b; }, 0) + mod;
+    valueEl.textContent = sum;
+    valueEl.classList.remove('crit-hit', 'crit-fail');
+    if (count === 1 && sides === 20) {
+      if (rolls[0] === 20) valueEl.classList.add('crit-hit');
+      if (rolls[0] === 1) valueEl.classList.add('crit-fail');
+    }
+    var label = count + 'd' + sides + (mod ? (mod > 0 ? ' + ' + mod : ' - ' + Math.abs(mod)) : '');
+    var breakdown = rolls.length > 1 || mod ? '(' + rolls.join(' + ') + (mod ? (mod > 0 ? ' + ' + mod : ' - ' + Math.abs(mod)) : '') + ')' : '';
+    detailEl.textContent = label + (breakdown ? '  ' + breakdown : '');
+
+    history.unshift({ label: label, sum: sum });
+    if (history.length > 8) history.pop();
+    renderHistory();
+  }
+
+  function renderHistory() {
+    historyEl.innerHTML = '';
+    history.forEach(function (h) {
+      var row = document.createElement('div');
+      row.className = 'dice-history-row';
+      row.innerHTML = '<span>' + h.label + '</span><span class="dice-history-sum">' + h.sum + '</span>';
+      historyEl.appendChild(row);
+    });
+  }
+
+  document.querySelectorAll('.die-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var sides = parseInt(btn.getAttribute('data-sides'), 10);
+      var r = roll(sides);
+      showResult(1, sides, 0, [r]);
+    });
+  });
+
+  document.getElementById('dice-roll-custom').addEventListener('click', function () {
+    var count = Math.max(1, Math.min(20, parseInt(document.getElementById('dice-count').value, 10) || 1));
+    var sides = parseInt(document.getElementById('dice-sides').value, 10);
+    var mod = parseInt(document.getElementById('dice-mod').value, 10) || 0;
+    var rolls = [];
+    for (var i = 0; i < count; i++) rolls.push(roll(sides));
+    showResult(count, sides, mod, rolls);
+  });
+})();
+</script>
+
+<script src="search-data.js"></script>
+<script src="search.js"></script>
 
 </body>
 </html>

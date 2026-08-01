@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Party · The Astlands</title>
+<title>NPCs · The Astlands</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,15 +15,20 @@
         <div class="brand">THE <span>ASTLANDS</span></div>
         <div class="brand-tag">A Campaign Chronicle · The Blighted West</div>
       </div>
+      <div class="search-widget print-hide">
+        <input type="search" id="site-search" placeholder="Search the Astlands..." autocomplete="off" aria-label="Search the site">
+        <div class="search-results" id="search-results"></div>
+      </div>
     </div>
     <nav class="main-nav">
       <a href="index.html">Story So Far</a>
       <a href="sessions.html">Sessions</a>
-      <a href="party.html" class="active">The Party</a>
-      <a href="npcs.html">NPCs</a>
+      <a href="party.html">The Party</a>
+      <a href="npcs.html" class="active">NPCs</a>
       <a href="world.html">The World</a>
       <a href="lore.html">Lore &amp; Journals</a>
       <a href="quests.html">Quests &amp; Threads</a>
+      <a href="recap.html">Previously On</a>
       <a href="tools.html">Tools</a>
     </nav>
   </div>
@@ -32,111 +37,245 @@
 <main class="wrap">
 
   <section class="hero" style="padding-bottom:20px;">
-    <div class="eyebrow">Abrams Unrest</div>
-    <h1 style="font-size:clamp(2.2rem,6vw,3.2rem);">The Party</h1>
-    <p class="lede">Six strangers who boarded a train together. They fight under a borrowed name now.</p>
+    <div class="eyebrow">Faces of Abrams Rest</div>
+    <h1 style="font-size:clamp(2.2rem,6vw,3.2rem);">NPCs</h1>
+    <p class="lede">The Baron's family, the people who serve him, and the ones trying to survive him.</p>
   </section>
 
   <section class="block">
-    <h2 class="section-title">Main Party</h2>
+    <h2 class="section-title">The Baron's House</h2>
     <div class="card-grid">
 
-      <div class="card" id="pc-chango">
-        <div class="card-head">
-          <div class="card-head-text">
-            <h4>Chango K Caza</h4>
-            <div class="meta">Player: Jonny <span class="sep">·</span> <svg class="class-icon" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9 H10 M10 9 V6.5 H13 V9 M10 9 V12 L7 14 V11 H4"/></g><circle cx="9" cy="9" r="0.6" fill="currentColor" stroke="none"/></svg>Gunslinger <span class="sep">·</span> Venaran</div>
-          </div>
-          <img class="card-portrait" src="images/chango.png" alt="Portrait of Chango K Caza">
-        </div>
-        <p class="card-bio">A Venaran bounty hunter who boarded the Desert Rose with his prisoner, the archaeologist Nathan Indiana Croft, in tow. He's since loosened Nathan's bindings in exchange for what he knew about stopping the Setantii — whether he means to let the man go entirely, he still hasn't said.</p>
-        <p class="card-bio">Off the clock, he wants the indentured Venaran blacksmith freed, and a way of his own up into the Cobbles.</p>
-        <div class="tag-row"><a class="tag" href="world.html#faction-abrams-unrest">Abrams Unrest</a></div>
+      <div class="card" id="npc-baron">
+        <h4>Baron Maxim Von Basten</h4>
+        <div class="meta">Not yet met in person</div>
+        <p class="card-bio">Rules the Blighted West with an iron fist from Abrams Rest, the region's only source of clean water. Traps citizens in indentured servitude: wages taxed heavily, quotas that accrue debt, and no leaving Abrams Rest until the debt is paid.</p>
+        <div class="tag-row"><a class="tag" href="npcs.html#npc-selene">Selene Von Basten</a><a class="tag" href="npcs.html#npc-professor-godt">Professor Godt</a><a class="tag" href="npcs.html#npc-lorcend">Lorcend Von Basten</a></div>
       </div>
 
-      <div class="card magic" id="pc-coren">
-        <div class="card-head">
-          <div class="card-head-text">
-            <h4>Coren Vael</h4>
-            <div class="meta">Player: Derek <span class="sep">·</span> <svg class="class-icon" viewBox="0 0 16 16"><path d="M8 1 L9 8 L8 15 L7 8 Z" fill="currentColor"/><path d="M5 8 H11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Rogue <span class="sep">·</span> Human</div>
-          </div>
-          <img class="card-portrait" src="images/coren.png" alt="Portrait of Coren Vael">
-        </div>
-        <p class="card-bio">One blue eye, one green — a mark of his birth lineage — and once a member of the Silent Knives. He fled Abrams Rest after a botched solo job, stabbing his partner Jareth mid-spell in their safehouse before running for reasons he still hasn't fully explained.</p>
-        <p class="card-bio">Ressa told him what he came back to: the Knives wiped out in his absence, herself spared and put to work as a foreman. A journal on Subject 442 finally answered what happened to Jareth's body — and revealed that Coren's mother is the hag Callow May, a secret he's at last shared with the party. Born in Dreadmere Marsh; these days, home is nowhere in particular.</p>
-        <div class="tag-row"><a class="tag" href="world.html#faction-silent-knives">Silent Knives</a><a class="tag" href="world.html#faction-abrams-unrest">Abrams Unrest</a></div>
+      <div class="card" id="npc-selene">
+        <h4>Selene Von Basten</h4>
+        <div class="meta">Daughter of the Baron <span class="sep">·</span> Encountered: The Riad, Session 7</div>
+        <p class="card-bio">Wears a silken coat, thigh-high boots, a silk face covering, layered jewellery, and a headdress with two blue tassels — and carries a large rifle. Encountered at the Riad, where she refused to enter herself and threatened the guards over the delay.</p>
+        <div class="tag-row"><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a><a class="tag" href="npcs.html#npc-lorcend">Lorcend Von Basten</a></div>
       </div>
 
-      <div class="card" id="pc-hylanku">
-        <div class="card-head">
-          <div class="card-head-text">
-            <h4>Hylanku Lonehorn</h4>
-            <div class="meta">Player: Robbie <span class="sep">·</span> <svg class="class-icon" viewBox="0 0 16 16"><path d="M8 1 L14 3 V8 C14 12 11 14 8 15 C5 14 2 12 2 8 V3 Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>Champion <span class="sep">·</span> Minotaur</div>
-          </div>
-          <img class="card-portrait" src="images/hylanku.png" alt="Portrait of Hylanku Lonehorn">
-        </div>
-        <p class="card-bio">One horn broken, and a voice that still comes out in blunt, almost neanderthal common. He believes someone he's looking for is being held by the Professor in the Library, and carries real guilt over failing to protect the party during the bat attack at the Colosseum.</p>
-        <p class="card-bio">He prays to Jarak with a token given to him by "Old Bull," and hasn't stopped searching for a red-haired elven mage named Foxfire.</p>
-        <div class="tag-row"><a class="tag" href="world.html#faction-abrams-unrest">Abrams Unrest</a><a class="tag" href="npcs.html#npc-old-bull">Old Bull</a></div>
+      <div class="card" id="npc-lorcend">
+        <h4>Lorcend Von Basten</h4>
+        <div class="meta">Son of the Baron <span class="sep">·</span> Not yet met in person</div>
+        <p class="card-bio">Long silver hair, a scar on his cheek. Takes instructions from the Professor and brings him experiment subjects — and personally redirected Jareth's body toward the library the night the Silent Knives fell.</p>
+        <p class="card-bio">Believed to be the silver-haired enforcer who killed Old Bull and broke Hylanku's horn.</p>
+        <div class="tag-row"><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a><a class="tag" href="npcs.html#npc-professor-godt">Professor Godt</a></div>
       </div>
 
-      <div class="card magic" id="pc-lira">
-        <div class="card-head">
-          <div class="card-head-text">
-            <h4>Lira Cervan</h4>
-            <div class="meta">Player: Abi <span class="sep">·</span> <svg class="class-icon" viewBox="0 0 16 16"><path d="M8 2 C13 4 13 10 8 14 C3 10 3 4 8 2 Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 3 V13" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>Druid <span class="sep">·</span> Elf</div>
-          </div>
-          <img class="card-portrait" src="images/lira.png" alt="Portrait of Lira Cervan">
-        </div>
-        <p class="card-bio">Came to Abrams Rest looking for her elk, Thallion, and enlisted the party to help win him back in a Colosseum fight — successfully.</p>
-        <p class="card-bio">She keeps him tucked inside her hat when he's not needed; antlers appear on the brim the moment he vanishes into it. Home is the Dead Woods, whenever she makes it back.</p>
-        <div class="tag-row"><a class="tag" href="world.html#faction-abrams-unrest">Abrams Unrest</a><span class="tag">Familiar: Thallion</span></div>
-      </div>
-
-      <div class="card" id="pc-luxem">
-        <div class="card-head">
-          <div class="card-head-text">
-            <h4>Luxem</h4>
-            <div class="meta">Player: Katie <span class="sep">·</span> <svg class="class-icon" viewBox="0 0 16 16"><path d="M8 1 L9.2 6.8 L15 8 L9.2 9.2 L8 15 L6.8 9.2 L1 8 L6.8 6.8 Z" fill="currentColor"/></svg>Sorcerer <span class="sep">·</span> Elf</div>
-          </div>
-          <img class="card-portrait" src="images/luxem.png" alt="Portrait of Luxem">
-        </div>
-        <p class="card-bio">Never said why she was travelling to Abrams Rest, and wasn't glad to find another elf already in the party. She unwittingly triggered the Setantii at the goblin camp and was knocked cold — and never fully woke from it, a mystery even the Plague Doctor couldn't explain.</p>
-        <p class="card-bio">She died in her sleep during the Cobbles work; Hylanku learned of it in Session 9.</p>
-        <div class="tag-row"><span class="tag status-dead">Deceased</span></div>
-      </div>
-
-      <div class="card magic" id="pc-quercucoonie">
-        <div class="card-head">
-          <div class="card-head-text">
-            <h4>Quercucoonie</h4>
-            <div class="meta">Player: Booth <span class="sep">·</span> <svg class="class-icon" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="8" r="2.2" fill="currentColor"/><path d="M8 1 V2.6 M8 13.4 V15 M1 8 H2.6 M13.4 8 H15" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>Summoner <span class="sep">·</span> Tenuki</div>
-          </div>
-          <img class="card-portrait" src="images/quercucoonie.png" alt="Portrait of Quercucoonie">
-        </div>
-        <p class="card-bio">On a mission to reforest his dying homeland, and to understand why it's dying in the first place. He's asked Ressa about survey work involving the mind, and prays to a deity named Orth.</p>
-        <p class="card-bio">His summoned eidolon, <strong>Verdant Shade</strong> — a tree-like creature that shares his health pool — rarely strays far. Home is the Hodenbaumhaut Forest.</p>
-        <div class="tag-row"><a class="tag" href="world.html#faction-abrams-unrest">Abrams Unrest</a><span class="tag">Eidolon: Verdant Shade</span></div>
+      <div class="card magic" id="npc-professor-godt">
+        <h4>Professor Godt</h4>
+        <div class="meta">"The brains to the Baron's brawn" <span class="sep">·</span> Not yet met in person</div>
+        <p class="card-bio">Experiments on creatures, magic users, and things pulled from the Drop. Mining has pushed closer to the Darklands since his arrival — and he's rumoured never to be seen by anyone recently.</p>
+        <div class="tag-row"><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a></div>
       </div>
 
     </div>
   </section>
 
-  <div class="divider"><div class="gem"></div>THE ROSTER<div class="gem"></div></div>
-
   <section class="block">
-    <h2 class="section-title">Temporarily Joined the Party</h2>
+    <h2 class="section-title">Abrams Rest</h2>
     <div class="card-grid">
 
-      <div class="card" id="pc-phil">
-        <h4>Phil Philliamson</h4>
-        <div class="meta">Player: Adam <span class="sep">·</span> Human (?)</div>
-        <p class="card-bio">Joined the party the moment they arrived — a benefactor paid him to watch them, though he's never said who. Nicknamed "Crosswind Phil," he hinted there are ways into the Cobbles that don't need a pass.</p>
-        <p class="card-bio">An old injury left him scarred and imbued with magic that once saved his life; the scar still flashes blue and whispers at the mention of magic. He wants the Baron gone, fought hard in the Colosseum, and was last seen fleeing the opposite gate once the bats came down.</p>
-        <div class="tag-row"><a class="tag" href="world.html#faction-abrams-unrest">Abrams Unrest</a><span class="tag status-unknown">Status: Unknown</span></div>
-        <div class="meta" style="margin-top:10px;">First appearance: Session 5 <span class="sep">·</span> Last appearance: Session 5</div>
+      <div class="card" id="npc-ressa">
+        <h4>Ressa Vann</h4>
+        <div class="meta">Encountered: The Dancing Cat, Session 5</div>
+        <p class="card-bio">Recruited Coren to the Silent Knives; spared by the Baron for reasons unknown and given a foreman role instead. Helped find the party work and obtained work passes plus a single Cobbles gate pass.</p>
+        <p class="card-bio">Warned Coren she'd kill him if she learned he'd had a hand in the massacre of the Silent Knives.</p>
+        <div class="tag-row"><a class="tag" href="world.html#faction-silent-knives">Silent Knives</a><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a></div>
       </div>
 
+      <div class="card" id="npc-pok">
+        <h4>Pok</h4>
+        <div class="meta">Encountered: The Dancing Cat, Session 5</div>
+        <p class="card-bio">Barman at the Dancing Cat.</p>
+        <div class="tag-row"><a class="tag" href="npcs.html#npc-ressa">Ressa Vann</a></div>
+      </div>
+
+      <div class="card magic" id="npc-plague-doctor">
+        <h4>"Plague Doctor"</h4>
+        <div class="meta">Encountered: The Dancing Cat, Session 6</div>
+        <p class="card-bio">Brought from the Cliffs to the Dancing Cat to treat Luxem, then to treat the victims sheltering there after the bat attack. Used healing magic on the party without wearing a collar — nobody's explained how.</p>
+        <div class="tag-row"><a class="tag" href="npcs.html#npc-ressa">Ressa Vann</a></div>
+      </div>
+
+      <div class="card" id="npc-nathan">
+        <h4>Nathan Indiana Croft</h4>
+        <div class="meta">Encountered: Aboard the Desert Rose, Session 1</div>
+        <p class="card-bio">Archaeologist studying the Old World, wanted by the Baron. Began as Chango's prisoner — and holds knowledge that may challenge the Baron's authority.</p>
+      </div>
+
+      <div class="card" id="npc-luddy">
+        <h4>Luddy</h4>
+        <div class="meta">Encountered: The Colosseum, Session 5</div>
+        <p class="card-bio">Pitmaster of the Colosseum. Keeps caged animals for the Professor.</p>
+        <div class="tag-row"><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a><a class="tag" href="npcs.html#npc-professor-godt">Professor Godt</a></div>
+      </div>
+
+      <div class="card" id="npc-jane">
+        <h4>Jane</h4>
+        <div class="meta">Encountered: The desert, en route to the goblin camp, Session 2</div>
+        <p class="card-bio">A grieving woman found drinking hard by a desert campfire on the way to the goblin camp. Lira broke through to her: the Baron's men killed her husband and son while hunting mages.</p>
+      </div>
+
+      <div class="card" id="npc-red-rider">
+        <h4>Red Rider</h4>
+        <div class="meta">Seen from a distance: Above the Colosseum, Session 5</div>
+        <p class="card-bio">Rides a giant bat and led the attack on Abrams Rest. From Nar-Voth in the Darklands — motives unclear, but shouted "Too long have we invaded their domain" and later warned the city not to enter Nar-Voth again.</p>
+      </div>
+
+      <div class="card" id="npc-thistogg">
+        <h4>Thistogg</h4>
+        <div class="meta">Encountered: Aboard the Desert Rose, Session 1</div>
+        <p class="card-bio">Engineer of the Desert Rose. Sent the party after the goblins who stole the train's magicite core.</p>
+      </div>
+
+      <div class="card" id="npc-gaskin">
+        <h4>Gaskin</h4>
+        <div class="meta">Encountered: The Cobbles gate, Session 7</div>
+        <p class="card-bio">Tall, gaunt guard assigned to monitor the party once they entered the Cobbles in Session 7.</p>
+        <div class="tag-row"><span class="tag">Guards of Abrams Rest</span><a class="tag" href="npcs.html#npc-lorcend">Lorcend Von Basten</a></div>
+      </div>
+
+      <div class="card" id="npc-kuldosk">
+        <h4>Kuldosk</h4>
+        <div class="meta">Encountered: The Galleries auction, Session 9</div>
+        <p class="card-bio">Sold at auction in the Cobbles as "Auction Item 297"; bought and freed in Session 10 by Quercucoonie, who first named him Little Freeman before learning his real name.</p>
+        <p class="card-bio">Six foot, muscular, black hair in a mohawk with a plaited ponytail, black beard. Attended the library infiltration with the party.</p>
+        <div class="tag-row"><a class="tag" href="party.html#pc-quercucoonie">Quercucoonie</a></div>
+      </div>
+
+      <div class="card" id="npc-yangu">
+        <h4>Yangu</h4>
+        <div class="meta">Encountered: His smithy, Session 5</div>
+        <p class="card-bio">A blacksmith trapped in debt to the Baron — <a href="party.html#pc-chango">Chango</a> tried to talk him into accepting help freeing himself, without success. Sold Quercucoonie a crossbow, and later gave <a href="party.html#pc-hylanku">Hylanku</a> a worn but sturdy set of half plate armour.</p>
+        <p class="card-bio">Broke the chain between Hylanku's manacles at his request, though Hylanku kept the wristbands on as a reminder. By Session 9 he'd been set to making collars, and looked at Hylanku with enough sadness to tell him to go speak with Ressa instead.</p>
+        <div class="tag-row"><a class="tag" href="party.html#pc-hylanku">Hylanku</a><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"><div class="gem"></div><div class="gem"></div></div>
+
+  <section class="block">
+    <h2 class="section-title">The Missing and the Dead</h2>
+    <div class="card-grid">
+
+      <div class="card" id="npc-old-bull">
+        <h4>Old Bull</h4>
+        <div class="meta">Encountered: The Coccium Ruins, years before the party's arrival (told in Session 10)</div>
+        <p class="card-bio">An elderly minotaur devoted to Jarak, the six-horned first minotaur — attuned to the earth and its spirits, and the one who kept a wandering caravan clear of danger for years. Found <a href="party.html#pc-hylanku">Hylanku</a> half-feral among the Coccium Ruins, calmed him, and talked the caravan into taking him in. Spent years teaching him Jarak's faith, minotaur history, and the Petran nature of their people.</p>
+        <p class="card-bio">Stood against the Baron's men when they came to enslave Foxfire, and was beaten to his knees for it. A silver-haired enforcer — since identified as <a href="npcs.html#npc-lorcend">Lorcend Von Basten</a> — shot him dead with the same bullet that shattered Hylanku's horn.</p>
+        <p class="card-bio">His body didn't stay buried. Recovered as <a href="lore.html#subject-469">Subject 469</a>, stripped to the bone and bound with necromantic magic into one of the Professor's guardians.</p>
+        <div class="tag-row"><a class="tag" href="party.html#pc-hylanku">Hylanku</a><span class="tag status-dead">Deceased</span></div>
+      </div>
+
+      <div class="card magic" id="npc-foxfire">
+        <h4>Foxfire</h4>
+        <div class="meta">Not yet met &mdash; known through Hylanku's past and secondhand reports</div>
+        <p class="card-bio">A young red-haired half-elven mage who kept a wandering caravan fed and watered with magic, staying hidden from the Baron's collars. Became Hylanku's closest friend during his years with the caravan.</p>
+        <p class="card-bio">When the Baron's men attacked to take her, Old Bull died protecting her and Hylanku was dragged away in chains — he never learned whether she got free. Years later, a servant in the Galleries recalled a red-haired mage matching her description passing through the slave auctions, bought by someone close to the Baron: short brown hair, brown eyes, never without a cigarette. Hylanku is still looking.</p>
+        <div class="tag-row"><a class="tag" href="party.html#pc-hylanku">Hylanku</a><span class="tag status-unknown">Status: Unknown</span></div>
+      </div>
+
+      <div class="card" id="npc-jareth">
+        <h4>Jareth</h4>
+        <div class="meta">Not yet met &mdash; known through Coren's account and the Professor's journals</div>
+        <p class="card-bio"><a href="party.html#pc-coren">Coren's</a> former partner in the Silent Knives. On the night of the failed coup, Jareth never showed for the job — lost in a spell — and Coren found him back at the safehouse and stabbed him through the neck mid-casting before fleeing the city.</p>
+        <p class="card-bio">He should have died. A green hag named Callow May, whose son loved him, cursed him instead to never die and never heal. Recovered by the Professor as <a href="lore.html#subject-442">Subject 442</a>, he's been altered piece by piece ever since — parts of him replaced with larger creatures, and dragon hide.</p>
+        <div class="tag-row"><a class="tag" href="party.html#pc-coren">Coren Vael</a><a class="tag" href="npcs.html#npc-callow-may">Callow May</a></div>
+      </div>
+
+      <div class="card magic" id="npc-callow-may">
+        <h4>Callow May</h4>
+        <div class="meta">Not yet met &mdash; known only through the Professor's journals</div>
+        <p class="card-bio">A green hag, and — as Coren has finally admitted to the party — his mother. Her son loved Jareth; when Coren left him for dead, she cursed him to never die and never heal rather than let him go. She made contact with the Professor over the body, allowed him to experiment freely, and asked only to be told if anyone ever came looking.</p>
+        <div class="tag-row"><a class="tag" href="party.html#pc-coren">Coren Vael</a><a class="tag" href="npcs.html#npc-jareth">Jareth</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"><div class="gem"></div><div class="gem"></div></div>
+
+  <section class="block">
+    <h2 class="section-title">How They Connect</h2>
+    <p class="prose" style="color:var(--bone-dim); max-width:65ch; margin-bottom:6px;">The tightest knot in the story so far — the Baron's family, the Professor's experiments, and the two pasts (Coren's and Hylanku's) that keep leading back to the same people. Click any name to jump to their entry.</p>
+    <div class="web-diagram">
+<svg class="web-diagram-svg" viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg">
+      <line class="web-edge" x1="450" y1="50" x2="250" y2="130" />
+      <line class="web-edge" x1="450" y1="50" x2="650" y2="130" />
+      <line class="web-edge" x1="450" y1="50" x2="780" y2="250" />
+      <line class="web-edge" x1="650" y1="130" x2="780" y2="250" />
+      <line class="web-edge" x1="650" y1="130" x2="710" y2="400" />
+      <line class="web-edge" x1="650" y1="130" x2="500" y2="410" />
+      <line class="web-edge" x1="780" y1="250" x2="500" y2="410" />
+      <line class="web-edge" x1="780" y1="250" x2="710" y2="400" />
+      <line class="web-edge" x1="350" y1="500" x2="500" y2="410" />
+      <line class="web-edge" x1="350" y1="500" x2="230" y2="400" />
+      <line class="web-edge" x1="230" y1="400" x2="500" y2="410" />
+      <line class="web-edge" x1="110" y1="240" x2="230" y2="400" />
+      <line class="web-edge" x1="110" y1="240" x2="60" y2="390" />
+      <line class="web-edge" x1="110" y1="240" x2="450" y2="50" />
+      <line class="web-edge" x1="230" y1="400" x2="60" y2="390" />
+      <line class="web-edge" x1="840" y1="480" x2="710" y2="400" />
+      <line class="web-edge" x1="840" y1="480" x2="630" y2="540" />
+      <line class="web-edge" x1="710" y1="400" x2="630" y2="540" />
+      <a class="web-node" href="npcs.html#npc-baron">
+        <circle cx="450" cy="50" r="8" />
+        <text x="450" y="34" text-anchor="middle">Baron</text>
+      </a>
+      <a class="web-node" href="npcs.html#npc-selene">
+        <circle cx="250" cy="130" r="8" />
+        <text x="250" y="114" text-anchor="middle">Selene</text>
+      </a>
+      <a class="web-node" href="npcs.html#npc-lorcend">
+        <circle cx="650" cy="130" r="8" />
+        <text x="650" y="114" text-anchor="middle">Lorcend</text>
+      </a>
+      <a class="web-node" href="npcs.html#npc-professor-godt">
+        <circle cx="780" cy="250" r="8" />
+        <text x="780" y="234" text-anchor="middle">Prof. Godt</text>
+      </a>
+      <a class="web-node" href="npcs.html#npc-ressa">
+        <circle cx="110" cy="240" r="8" />
+        <text x="110" y="224" text-anchor="middle">Ressa</text>
+      </a>
+      <a class="web-node" href="world.html#faction-silent-knives">
+        <circle cx="60" cy="390" r="8" />
+        <text x="60" y="374" text-anchor="middle">Silent Knives</text>
+      </a>
+      <a class="web-node" href="party.html#pc-coren">
+        <circle cx="230" cy="400" r="8" />
+        <text x="230" y="384" text-anchor="middle">Coren</text>
+      </a>
+      <a class="web-node" href="npcs.html#npc-callow-may">
+        <circle cx="350" cy="500" r="8" />
+        <text x="350" y="484" text-anchor="middle">Callow May</text>
+      </a>
+      <a class="web-node" href="npcs.html#npc-jareth">
+        <circle cx="500" cy="410" r="8" />
+        <text x="500" y="394" text-anchor="middle">Jareth</text>
+      </a>
+      <a class="web-node" href="npcs.html#npc-old-bull">
+        <circle cx="710" cy="400" r="8" />
+        <text x="710" y="384" text-anchor="middle">Old Bull</text>
+      </a>
+      <a class="web-node" href="party.html#pc-hylanku">
+        <circle cx="840" cy="480" r="8" />
+        <text x="840" y="464" text-anchor="middle">Hylanku</text>
+      </a>
+      <a class="web-node" href="npcs.html#npc-foxfire">
+        <circle cx="630" cy="540" r="8" />
+        <text x="630" y="524" text-anchor="middle">Foxfire</text>
+      </a>
+</svg>
     </div>
   </section>
 
@@ -146,6 +285,9 @@
   <span>The Astlands — a home campaign chronicle</span>
   <span>Session 10 and counting</span>
 </footer>
+
+<script src="search-data.js"></script>
+<script src="search.js"></script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NPCs · The Astlands</title>
+<title>Lore &amp; Journals · The Astlands</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,15 +15,20 @@
         <div class="brand">THE <span>ASTLANDS</span></div>
         <div class="brand-tag">A Campaign Chronicle · The Blighted West</div>
       </div>
+      <div class="search-widget print-hide">
+        <input type="search" id="site-search" placeholder="Search the Astlands..." autocomplete="off" aria-label="Search the site">
+        <div class="search-results" id="search-results"></div>
+      </div>
     </div>
     <nav class="main-nav">
       <a href="index.html">Story So Far</a>
       <a href="sessions.html">Sessions</a>
       <a href="party.html">The Party</a>
-      <a href="npcs.html" class="active">NPCs</a>
+      <a href="npcs.html">NPCs</a>
       <a href="world.html">The World</a>
-      <a href="lore.html">Lore &amp; Journals</a>
+      <a href="lore.html" class="active">Lore &amp; Journals</a>
       <a href="quests.html">Quests &amp; Threads</a>
+      <a href="recap.html">Previously On</a>
       <a href="tools.html">Tools</a>
     </nav>
   </div>
@@ -32,169 +37,114 @@
 <main class="wrap">
 
   <section class="hero" style="padding-bottom:20px;">
-    <div class="eyebrow">Faces of Abrams Rest</div>
-    <h1 style="font-size:clamp(2.2rem,6vw,3.2rem);">NPCs</h1>
-    <p class="lede">The Baron's family, the people who serve him, and the ones trying to survive him.</p>
+    <div class="eyebrow">What Mortal Kind Remembers</div>
+    <h1 style="font-size:clamp(2.2rem,6vw,3.2rem);">Lore &amp; Journals</h1>
+    <p class="lede">The world before, the rules that keep it broken now, and the notes of a man who calls himself the Professor.</p>
   </section>
 
   <section class="block">
-    <h2 class="section-title">The Baron's House</h2>
-    <div class="card-grid">
-
-      <div class="card" id="npc-baron">
-        <h4>Baron Maxim Von Basten</h4>
-        <div class="meta">Not yet met in person</div>
-        <p class="card-bio">Rules the Blighted West with an iron fist from Abrams Rest, the region's only source of clean water. Traps citizens in indentured servitude: wages taxed heavily, quotas that accrue debt, and no leaving Abrams Rest until the debt is paid.</p>
-        <div class="tag-row"><a class="tag" href="npcs.html#npc-selene">Selene Von Basten</a><a class="tag" href="npcs.html#npc-professor-godt">Professor Godt</a><a class="tag" href="npcs.html#npc-lorcend">Lorcend Von Basten</a></div>
+    <h2 class="section-title">Lore</h2>
+    <div class="entry-list">
+      <div class="item" id="lore-devastation">
+        <h4>The Great Devastation</h4>
+        <p>A thousand years ago, a great calamity befell the world. What exactly happened, mortal kind no longer remembers — but the effects remain to this day.</p>
       </div>
-
-      <div class="card" id="npc-selene">
-        <h4>Selene Von Basten</h4>
-        <div class="meta">Daughter of the Baron <span class="sep">·</span> Encountered: The Riad, Session 7</div>
-        <p class="card-bio">Wears a silken coat, thigh-high boots, a silk face covering, layered jewellery, and a headdress with two blue tassels — and carries a large rifle. Encountered at the Riad, where she refused to enter herself and threatened the guards over the delay.</p>
-        <div class="tag-row"><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a><a class="tag" href="npcs.html#npc-lorcend">Lorcend Von Basten</a></div>
+      <div class="item" id="lore-old-world">
+        <h4>The Old World</h4>
+        <p>The name given to the world before the Great Devastation.</p>
       </div>
-
-      <div class="card" id="npc-lorcend">
-        <h4>Lorcend Von Basten</h4>
-        <div class="meta">Son of the Baron <span class="sep">·</span> Not yet met in person</div>
-        <p class="card-bio">Long silver hair, a scar on his cheek. Takes instructions from the Professor and brings him experiment subjects — and personally redirected Jareth's body toward the library the night the Silent Knives fell.</p>
-        <p class="card-bio">Believed to be the silver-haired enforcer who killed Old Bull and broke Hylanku's horn.</p>
-        <div class="tag-row"><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a><a class="tag" href="npcs.html#npc-professor-godt">Professor Godt</a></div>
+      <div class="item" id="lore-magic">
+        <h4>Magic</h4>
+        <p>Anyone in the Blighted West who displays magical tendencies risks being captured and put to work producing crops, water, food, and other services. It's normal to hide magical ability entirely to avoid that fate.</p>
       </div>
-
-      <div class="card magic" id="npc-professor-godt">
-        <h4>Professor Godt</h4>
-        <div class="meta">"The brains to the Baron's brawn" <span class="sep">·</span> Not yet met in person</div>
-        <p class="card-bio">Experiments on creatures, magic users, and things pulled from the Drop. Mining has pushed closer to the Darklands since his arrival — and he's rumoured never to be seen by anyone recently.</p>
-        <div class="tag-row"><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a></div>
+      <div class="item" id="lore-slavery">
+        <h4>Slavery</h4>
+        <p>Slavery exists throughout the Blighted West, particularly the enslavement of people with magical abilities, captured and used to magically produce crops, water, and food.</p>
       </div>
-
+      <div class="item" id="lore-collars">
+        <h4>Slave Collars</h4>
+        <p>Runic collars suppress a magic user's abilities entirely, except for whichever single spell happens to align with the runes worked into the collar.</p>
+      </div>
+      <div class="item" id="lore-water">
+        <h4>Water</h4>
+        <p>Most naturally occurring water is acidic and toxic to nearly all life — even the oceans surrounding the Blighted West.</p>
+      </div>
+      <div class="item" id="lore-funeral-rites">
+        <h4>Funeral Rites</h4>
+        <p>Bodies are wrapped in cloth and set on the water, where they float to the waterfall and fall into the Drop. It's been the ritual of Abrams Rest for decades.</p>
+      </div>
     </div>
   </section>
 
-  <section class="block">
-    <h2 class="section-title">Abrams Rest</h2>
-    <div class="card-grid">
-
-      <div class="card" id="npc-ressa">
-        <h4>Ressa Vann</h4>
-        <div class="meta">Encountered: The Dancing Cat, Session 5</div>
-        <p class="card-bio">Recruited Coren to the Silent Knives; spared by the Baron for reasons unknown and given a foreman role instead. Helped find the party work and obtained work passes plus a single Cobbles gate pass.</p>
-        <p class="card-bio">Warned Coren she'd kill him if she learned he'd had a hand in the massacre of the Silent Knives.</p>
-        <div class="tag-row"><a class="tag" href="world.html#faction-silent-knives">Silent Knives</a><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a></div>
-      </div>
-
-      <div class="card" id="npc-pok">
-        <h4>Pok</h4>
-        <div class="meta">Encountered: The Dancing Cat, Session 5</div>
-        <p class="card-bio">Barman at the Dancing Cat.</p>
-        <div class="tag-row"><a class="tag" href="npcs.html#npc-ressa">Ressa Vann</a></div>
-      </div>
-
-      <div class="card magic" id="npc-plague-doctor">
-        <h4>"Plague Doctor"</h4>
-        <div class="meta">Encountered: The Dancing Cat, Session 6</div>
-        <p class="card-bio">Brought from the Cliffs to the Dancing Cat to treat Luxem, then to treat the victims sheltering there after the bat attack. Used healing magic on the party without wearing a collar — nobody's explained how.</p>
-        <div class="tag-row"><a class="tag" href="npcs.html#npc-ressa">Ressa Vann</a></div>
-      </div>
-
-      <div class="card" id="npc-nathan">
-        <h4>Nathan Indiana Croft</h4>
-        <div class="meta">Encountered: Aboard the Desert Rose, Session 1</div>
-        <p class="card-bio">Archaeologist studying the Old World, wanted by the Baron. Began as Chango's prisoner — and holds knowledge that may challenge the Baron's authority.</p>
-      </div>
-
-      <div class="card" id="npc-luddy">
-        <h4>Luddy</h4>
-        <div class="meta">Not yet met in person &mdash; arranged through Ressa, Session 5</div>
-        <p class="card-bio">Pitmaster of the Colosseum. Keeps caged animals for the Professor.</p>
-        <div class="tag-row"><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a><a class="tag" href="npcs.html#npc-professor-godt">Professor Godt</a></div>
-      </div>
-
-      <div class="card" id="npc-jane">
-        <h4>Jane</h4>
-        <div class="meta">Encountered: The desert, en route to the goblin camp, Session 2</div>
-        <p class="card-bio">A grieving woman found drinking hard by a desert campfire on the way to the goblin camp. Lira broke through to her: the Baron's men killed her husband and son while hunting mages.</p>
-      </div>
-
-      <div class="card" id="npc-red-rider">
-        <h4>Red Rider</h4>
-        <div class="meta">Seen from a distance: Above the Colosseum, Session 5</div>
-        <p class="card-bio">Rides a giant bat and led the attack on Abrams Rest. From Nar-Voth in the Darklands — motives unclear, but shouted "Too long have we invaded their domain" and later warned the city not to enter Nar-Voth again.</p>
-      </div>
-
-      <div class="card" id="npc-thistogg">
-        <h4>Thistogg</h4>
-        <div class="meta">Encountered: Aboard the Desert Rose, Session 1</div>
-        <p class="card-bio">Engineer of the Desert Rose. Sent the party after the goblins who stole the train's magicite core.</p>
-      </div>
-
-      <div class="card" id="npc-gaskin">
-        <h4>Gaskin</h4>
-        <div class="meta">Encountered: The Cobbles gate, Session 7</div>
-        <p class="card-bio">Tall, gaunt guard assigned to monitor the party once they entered the Cobbles in Session 7.</p>
-        <div class="tag-row"><span class="tag">Guards of Abrams Rest</span><a class="tag" href="npcs.html#npc-lorcend">Lorcend Von Basten</a></div>
-      </div>
-
-      <div class="card" id="npc-kuldosk">
-        <h4>Kuldosk</h4>
-        <div class="meta">Encountered: The Galleries auction, Session 9</div>
-        <p class="card-bio">Sold at auction in the Cobbles as "Auction Item 297"; bought and freed in Session 10 by Quercucoonie, who first named him Little Freeman before learning his real name.</p>
-        <p class="card-bio">Six foot, muscular, black hair in a mohawk with a plaited ponytail, black beard. Attended the library infiltration with the party.</p>
-        <div class="tag-row"><a class="tag" href="party.html#pc-quercucoonie">Quercucoonie</a></div>
-      </div>
-
-      <div class="card" id="npc-yangu">
-        <h4>Yangu</h4>
-        <div class="meta">Encountered: His smithy, Session 5</div>
-        <p class="card-bio">A blacksmith trapped in debt to the Baron — <a href="party.html#pc-chango">Chango</a> tried to talk him into accepting help freeing himself, without success. Sold Quercucoonie a crossbow, and later gave <a href="party.html#pc-hylanku">Hylanku</a> a worn but sturdy set of half plate armour.</p>
-        <p class="card-bio">Broke the chain between Hylanku's manacles at his request, though Hylanku kept the wristbands on as a reminder. By Session 9 he'd been set to making collars, and looked at Hylanku with enough sadness to tell him to go speak with Ressa instead.</p>
-        <div class="tag-row"><a class="tag" href="party.html#pc-hylanku">Hylanku</a><a class="tag" href="npcs.html#npc-baron">Baron Maxim Von Basten</a></div>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="divider"><div class="gem"></div><div class="gem"></div></div>
+  <div class="divider"><div class="gem"></div>RECOVERED SESSION 10<div class="gem"></div></div>
 
   <section class="block">
-    <h2 class="section-title">The Missing and the Dead</h2>
-    <div class="card-grid">
+    <h2 class="section-title">Professor Godt's Journals</h2>
+    <p class="prose" style="color:var(--bone-dim); max-width:65ch;">Recovered from the library in Session 10. The combination for the pedestal lock beneath these files was built from three subject numbers: <strong style="color:var(--bone)">126, 442, 469.</strong></p>
 
-      <div class="card" id="npc-old-bull">
-        <h4>Old Bull</h4>
-        <div class="meta">Encountered: The Coccium Ruins, years before the party's arrival (told in Session 10)</div>
-        <p class="card-bio">An elderly minotaur devoted to Jarak, the six-horned first minotaur — attuned to the earth and its spirits, and the one who kept a wandering caravan clear of danger for years. Found <a href="party.html#pc-hylanku">Hylanku</a> half-feral among the Coccium Ruins, calmed him, and talked the caravan into taking him in. Spent years teaching him Jarak's faith, minotaur history, and the Petran nature of their people.</p>
-        <p class="card-bio">Stood against the Baron's men when they came to enslave Foxfire, and was beaten to his knees for it. A silver-haired enforcer — since identified as <a href="npcs.html#npc-lorcend">Lorcend Von Basten</a> — shot him dead with the same bullet that shattered Hylanku's horn.</p>
-        <p class="card-bio">His body didn't stay buried. Recovered as <a href="lore.html#subject-469">Subject 469</a>, stripped to the bone and bound with necromantic magic into one of the Professor's guardians.</p>
-        <div class="tag-row"><a class="tag" href="party.html#pc-hylanku">Hylanku</a><span class="tag status-dead">Deceased</span></div>
+    <details class="journal-toggle" open id="subject-001">
+      <summary>Subject 001 — Day 1 through Day 46</summary>
+      <div class="journal">
+        <h4>Subject File — 001</h4>
+        <div class="entry"><span class="day">Day 1 — The Idea</span>Two centuries of boredom have finally worn through. I've decided to take up the sciences properly — with my magick behind it, I expect to go far. I'd like to start with a servant.</div>
+        <div class="entry"><span class="day">Day 9 — Subject 001</span>A candidate presents herself: a young woman I've been courting, unaware of my nature. I intend to combine a chemist's approach to physiological change with my own arcane knowledge, and see whether I can build a being of subservience.</div>
+        <div class="entry"><span class="day">Day 27 — Halfway through</span>Progress, of a sort. The change causes her considerable pain — she begs me to end it. Her skin has begun to peel; I hope that's simply the old body making way for the new.</div>
+        <div class="entry"><span class="day">Day 46 — Transformation complete</span>She survived. Not what I'd hoped for — no able-bodied servant, only something that wails through most of the day — but for a first attempt, it's not without merit. Whatever I do to it, it heals near-instantly. This will be entertaining.</div>
       </div>
+    </details>
 
-      <div class="card magic" id="npc-foxfire">
-        <h4>Foxfire</h4>
-        <div class="meta">Not yet met &mdash; known through Hylanku's past and secondhand reports</div>
-        <p class="card-bio">A young red-haired half-elven mage who kept a wandering caravan fed and watered with magic, staying hidden from the Baron's collars. Became Hylanku's closest friend during his years with the caravan.</p>
-        <p class="card-bio">When the Baron's men attacked to take her, Old Bull died protecting her and Hylanku was dragged away in chains — he never learned whether she got free. Years later, a servant in the Galleries recalled a red-haired mage matching her description passing through the slave auctions, bought by someone close to the Baron: short brown hair, brown eyes, never without a cigarette. Hylanku is still looking.</p>
-        <div class="tag-row"><a class="tag" href="party.html#pc-hylanku">Hylanku</a><span class="tag status-unknown">Status: Unknown</span></div>
+    <details class="journal-toggle" id="subject-126">
+      <summary>Subject 126 — believed to be Chango</summary>
+      <div class="journal">
+        <h4>Subject File — 126</h4>
+        <div class="entry"><span class="day">Day 1</span>A new specimen, following the loss of the last: a young male ape taken from the banks of the Nanji River, cousin to the Vanarans. Watched him fell a stray zinza with a thrown rock — good aim, real intention behind it. Put him to sleep while he ate his prize.</div>
+        <div class="entry"><span class="day">Day 18 — three doses weekly</span>His metamorphosis has begun. A puzzle that should take an ape three hours, he solved in thirty seconds. Verbal comprehension is coming along too, though he hasn't spoken yet. Increasing the dosage from here.</div>
+        <div class="entry"><span class="day">Day 57 — two doses daily</span>Motor skills much improved — he can hold and use a knife with real purpose. His spine is reshaping toward bipedal posture. Coupled with his natural physicality, he'll make a ferocious warrior. The changes seem to happen while he sleeps; I've started casting silence over his cage at night to study it further. He's stopped looking at me with rage. I've noticed him counting exits.</div>
+        <div class="entry"><span class="day">Day 237 — Termination of experiment</span>The mages have found what they were looking for, and this world is about to end. I've placed the subject in cryogenic stasis and hope he remains until I return. I warned that fool Abram. Now I have to clean up his mess. Before I go, I should give him a name.</div>
       </div>
+    </details>
 
-      <div class="card" id="npc-jareth">
-        <h4>Jareth</h4>
-        <div class="meta">Not yet met &mdash; known through Coren's account and the Professor's journals</div>
-        <p class="card-bio"><a href="party.html#pc-coren">Coren's</a> former partner in the Silent Knives. On the night of the failed coup, Jareth never showed for the job — lost in a spell — and Coren found him back at the safehouse and stabbed him through the neck mid-casting before fleeing the city.</p>
-        <p class="card-bio">He should have died. A green hag named Callow May, whose son loved him, cursed him instead to never die and never heal. Recovered by the Professor as <a href="lore.html#subject-442">Subject 442</a>, he's been altered piece by piece ever since — parts of him replaced with larger creatures, and dragon hide.</p>
-        <div class="tag-row"><a class="tag" href="party.html#pc-coren">Coren Vael</a><a class="tag" href="npcs.html#npc-callow-may">Callow May</a></div>
+    <details class="journal-toggle" id="subject-227">
+      <summary>Subject 227</summary>
+      <div class="journal">
+        <h4>Subject File — 227</h4>
+        <div class="entry"><span class="day">Day 1</span>Another attempt with the virus, still short a subject to take it as well as 126. A gnome female, young in her adult life — hoping her vigour and intellect help this along. Subjects have been hard to come by since what people are now calling "the Great Devastation," but beggars can't be choosers.</div>
+        <div class="entry"><span class="day">Day 25 — two doses daily</span>Speeding things up, brute force where finesse hasn't worked. No sign of improvement, only wailing.</div>
+        <div class="entry"><span class="day">Day 44 — To the pile</span>Complete failure. The gnome grew in size — a sign, I'd thought — but it didn't hold. Adding her to the pile. The undead husks will be useful eventually.</div>
       </div>
+    </details>
 
-      <div class="card magic" id="npc-callow-may">
-        <h4>Callow May</h4>
-        <div class="meta">Not yet met &mdash; known only through the Professor's journals</div>
-        <p class="card-bio">A green hag, and — as Coren has finally admitted to the party — his mother. Her son loved Jareth; when Coren left him for dead, she cursed him to never die and never heal rather than let him go. She made contact with the Professor over the body, allowed him to experiment freely, and asked only to be told if anyone ever came looking.</p>
-        <div class="tag-row"><a class="tag" href="party.html#pc-coren">Coren Vael</a><a class="tag" href="npcs.html#npc-jareth">Jareth</a></div>
+    <details class="journal-toggle" id="subject-442">
+      <summary>Subject 442 — Jareth</summary>
+      <div class="journal">
+        <h4>Subject File — 442</h4>
+        <div class="entry"><span class="day">Day 1 — The morning after the arrests</span>The Baron put down the coup before it truly began — mortals playing out the same performance, a thousand years on. Something more interesting happened last night, though: a surge of magick from Resident Square, crone magic specifically. Haven't felt that in a long while. I've told Lorcend to bring me anything found — people, corpses, either.</div>
+        <div class="entry"><span class="day">Day 2 — Subject 442</span>A delight. A young man, stabbed through the neck, and he still breathes. Stabilised for now — the magick keeping him alive is hag work, unmistakably. Poor boy, whatever he did to earn one of those creatures' contempt. It's been a long time since I've met power close to my own. I wonder if I could make contact.</div>
+        <div class="entry"><span class="day">Day 21 — Contact made</span>A green hag, going by Callow May. The boy was her son's lover, and she couldn't allow that — so she cursed him never to die, and never to heal. I may do as I please with him; she won't lift the curse, and I wouldn't want her to. She's asked to be told if anyone comes looking for him. I gave my word.</div>
+        <div class="entry"><span class="day">Day 63 — Piece by piece</span>I can remove enormous sections of him now and replace them with parts from far larger, stronger creatures — I've finally used the dragon hide I'd been saving. He may be the ultimate weapon before I'm through. Perhaps even the vessel I've been looking for.</div>
       </div>
+    </details>
 
-    </div>
+    <details class="journal-toggle" id="subject-469">
+      <summary>Subject 469 — Old Bull</summary>
+      <div class="journal">
+        <h4>Subject File — 469</h4>
+        <div class="entry"><span class="day">Day 1</span>Lorcend brought me a cadaver "to play with," his words — an elderly minotaur male. Minotaurs are vanishingly rare now; I've little use for an aged corpse. Though I recall reading their bones hold the strength of iron even into old age. Might have some use after all.</div>
+        <div class="entry"><span class="day">Day 23 — Beginning the ritual</span>Decided to use him as a guardian for my home. Ingredients needed: corpse-flower root, a live small animal, a flawless obsidian gemstone to bind the magicks. The gem will be hardest to find — I recall a mine somewhere in the Blight that might still stand.</div>
+        <div class="entry"><span class="day">Day 39 — Ingredients found</span>Asked Lorcend to bring the minotaur's belongings along with everything else. Nothing of note, save an amulet — the Horns of Bos, the Minotaur Emperor's royal guard — and a war axe. Odd that he carried it; the Minotaur Empire was lost to the Night Plains long ago. No matter — with this axe, he'll make a fine guard.</div>
+        <div class="entry"><span class="day">Day 42 — A new guard</span>Had to discard most of the flesh and work from the skeleton alone, but the strength held. He obeys without question — nothing of his soul remains. Took some muscle and a horn for my prized subject. He'll look incredible.</div>
+      </div>
+    </details>
+
+    <details class="journal-toggle" id="subject-693">
+      <summary>Subject 693 — Thallion</summary>
+      <div class="journal">
+        <h4>Subject File — 693</h4>
+        <div class="entry"><span class="day">Day 1 — An offer</span>The brute who runs the Colosseum claims to have an animal unlike anything he's seen — some kind of deer or caribou. Should be impossible; nothing like that survives anymore. Asked him to deliver it as soon as he can.</div>
+        <div class="entry"><span class="day">Day 4</span>The animal is no longer in his possession. Most displeased.</div>
+      </div>
+    </details>
+
   </section>
 
 </main>
@@ -203,6 +153,9 @@
   <span>The Astlands — a home campaign chronicle</span>
   <span>Session 10 and counting</span>
 </footer>
+
+<script src="search-data.js"></script>
+<script src="search.js"></script>
 
 </body>
 </html>
