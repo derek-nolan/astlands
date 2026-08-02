@@ -461,7 +461,7 @@ a.tag:hover { background: var(--rust); color: var(--bone); transform: translateY
   gap: 8px;
   padding: 18px 0 8px;
   border-bottom: 1px dashed rgba(207,154,76,0.22);
-  margin-bottom: 8px;
+  margin-bottom: 28px;
 }
 .session-jump-label {
   font-family: var(--font-mono);
