@@ -166,7 +166,9 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
   gap: 14px;
   margin: 46px 0 34px;
   color: var(--brass);
+  scroll-margin-top: 24px;
 }
+[id^="section-"] { scroll-margin-top: 24px; }
 .divider::before, .divider::after {
   content: "";
   flex: 1;
@@ -868,7 +870,7 @@ footer.site-footer {
   color: var(--bone-dim);
   text-align: center;
   max-width: 60ch;
-  margin: 14px auto 0;
+  margin: 0 auto 22px;
 }
 
 /* ---------------------------------------------------------
