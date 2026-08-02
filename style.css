@@ -399,6 +399,48 @@ a.tag:hover { background: var(--rust); color: var(--bone); transform: translateY
 }
 
 /* ---------------------------------------------------------
+   Loot table
+   --------------------------------------------------------- */
+
+.loot-table-wrap {
+  overflow-x: auto;
+}
+.loot-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+}
+.loot-table th {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brass);
+  text-align: left;
+  padding: 10px 16px 10px 0;
+  border-bottom: 2px solid rgba(207,154,76,0.3);
+  white-space: nowrap;
+}
+.loot-table td {
+  padding: 13px 16px 13px 0;
+  border-bottom: 1px solid rgba(207,154,76,0.12);
+  color: var(--bone-dim);
+  font-size: 0.92rem;
+  vertical-align: top;
+}
+.loot-table tr:hover td { background: rgba(193,85,42,0.06); }
+.loot-table .loot-unresolved {
+  font-style: italic;
+  color: var(--bone-dim);
+  opacity: 0.75;
+}
+
+@media (max-width: 640px) {
+  .loot-table { font-size: 0.85rem; }
+  .loot-table th, .loot-table td { padding: 9px 10px 9px 0; }
+}
+
+/* ---------------------------------------------------------
    Session log entries
    --------------------------------------------------------- */
 
