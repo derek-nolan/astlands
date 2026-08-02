@@ -938,11 +938,11 @@ footer.site-footer {
 .map-caption {
   font-family: var(--font-body);
   font-style: italic;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--bone-dim);
-  text-align: center;
+  text-align: left;
   max-width: 60ch;
-  margin: 0 auto 22px;
+  margin: 0 0 22px;
 }
 
 /* ---------------------------------------------------------
