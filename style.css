@@ -403,41 +403,55 @@ a.tag:hover { background: var(--rust); color: var(--bone); transform: translateY
    --------------------------------------------------------- */
 
 .loot-table-wrap {
+  background: var(--leather);
+  border: 1px solid rgba(207,154,76,0.18);
+  border-left: 3px solid var(--rust-dim);
+  padding: 6px 22px;
   overflow-x: auto;
 }
 .loot-table {
   width: 100%;
+  min-width: 560px;
   border-collapse: collapse;
   font-family: var(--font-body);
+  table-layout: fixed;
 }
+.loot-table col.col-item { width: 30%; }
+.loot-table col.col-session { width: 13%; }
+.loot-table col.col-found { width: 25%; }
+.loot-table col.col-where { width: 32%; }
+
 .loot-table th {
   font-family: var(--font-mono);
-  font-size: 0.66rem;
+  font-size: 0.64rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--brass);
   text-align: left;
-  padding: 10px 16px 10px 0;
+  padding: 16px 14px;
   border-bottom: 2px solid rgba(207,154,76,0.3);
-  white-space: nowrap;
 }
 .loot-table td {
-  padding: 13px 16px 13px 0;
+  padding: 15px 14px;
   border-bottom: 1px solid rgba(207,154,76,0.12);
   color: var(--bone-dim);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
   vertical-align: top;
 }
-.loot-table tr:hover td { background: rgba(193,85,42,0.06); }
+.loot-table tbody tr:last-child td { border-bottom: none; }
+.loot-table tbody tr:nth-child(even) td { background: rgba(0,0,0,0.14); }
+.loot-table tbody tr:hover td { background: rgba(193,85,42,0.08); }
 .loot-table .loot-unresolved {
   font-style: italic;
   color: var(--bone-dim);
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
 @media (max-width: 640px) {
+  .loot-table-wrap { padding: 4px 14px; }
   .loot-table { font-size: 0.85rem; }
-  .loot-table th, .loot-table td { padding: 9px 10px 9px 0; }
+  .loot-table th, .loot-table td { padding: 11px 10px; }
 }
 
 /* ---------------------------------------------------------
