@@ -207,19 +207,24 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
   font-size: 0.85rem;
 }
 .status-table-wrap {
+  background: var(--leather);
+  border: 1px solid rgba(207,154,76,0.18);
+  border-left: 3px solid var(--rust-dim);
+  padding: 6px 22px;
   overflow-x: auto;
   margin-top: 4px;
 }
 .status-table {
   width: 100%;
-  min-width: 520px;
+  min-width: 640px;
   border-collapse: collapse;
   font-family: var(--font-body);
   table-layout: fixed;
 }
-.status-table col.s-name { width: 40%; }
-.status-table col.s-status { width: 30%; }
-.status-table col.s-encountered { width: 30%; }
+.status-table col.s-name { width: 30%; }
+.status-table col.s-status { width: 26%; }
+.status-table col.s-encountered { width: 22%; }
+.status-table col.s-lastseen { width: 22%; }
 .status-table th {
   font-family: var(--font-mono);
   font-size: 0.62rem;
@@ -227,17 +232,19 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
   text-transform: uppercase;
   color: var(--brass);
   text-align: left;
-  padding: 10px 12px;
-  border-bottom: 2px solid rgba(207,154,76,0.25);
+  padding: 14px 12px;
+  border-bottom: 2px solid rgba(207,154,76,0.3);
 }
 .status-table td {
-  padding: 10px 12px;
-  border-bottom: 1px solid rgba(207,154,76,0.1);
+  padding: 13px 12px;
+  border-bottom: 1px solid rgba(207,154,76,0.12);
   color: var(--bone-dim);
   font-size: 0.86rem;
+  vertical-align: top;
 }
 .status-table tbody tr:last-child td { border-bottom: none; }
-.status-table tbody tr:nth-child(even) td { background: rgba(0,0,0,0.12); }
+.status-table tbody tr:nth-child(even) td { background: rgba(0,0,0,0.14); }
+.status-table tbody tr:hover td { background: rgba(193,85,42,0.08); }
 .status-table .s-alive { color: var(--magicite); }
 .status-table .s-dead { color: var(--danger); }
 .status-table .s-unknown, .status-table .s-unmet { color: var(--bone-dim); font-style: italic; opacity: 0.85; }
