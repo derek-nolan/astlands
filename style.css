@@ -241,6 +241,26 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
 .status-table .s-alive { color: var(--magicite); }
 .status-table .s-dead { color: var(--danger); }
 .status-table .s-unknown, .status-table .s-unmet { color: var(--bone-dim); font-style: italic; opacity: 0.85; }
+
+.story-figure {
+  margin: 32px 0;
+}
+.story-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(207,154,76,0.25);
+  box-shadow: 0 12px 34px rgba(0,0,0,0.5);
+}
+.story-figure figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brass);
+  text-align: center;
+  margin-top: 10px;
+}
 .divider::before, .divider::after {
   content: "";
   flex: 1;
