@@ -274,14 +274,16 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
    --------------------------------------------------------- */
 
 .tale-card {
-  display: flex;
-  gap: 32px;
   margin-bottom: 44px;
   background: var(--leather);
   border: 1px solid rgba(207,154,76,0.2);
   padding: 28px;
 }
-.tale-card.reverse { flex-direction: row-reverse; }
+.tale-top {
+  display: flex;
+  gap: 32px;
+}
+.tale-card.reverse .tale-top { flex-direction: row-reverse; }
 .tale-cover { flex: 0 0 260px; }
 .tale-cover img {
   display: block;
@@ -290,8 +292,9 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
   border: 2px solid var(--brass);
   box-shadow: 0 10px 26px rgba(0,0,0,0.5);
 }
-.tale-content { flex: 1; min-width: 0; }
-.tale-content h3 {
+.tale-header { flex: 1; min-width: 0; }
+.tale-header > .source-tag { display: block; width: fit-content; margin-bottom: 10px; }
+.tale-header h3 {
   font-family: var(--font-display);
   font-size: 2.4rem;
   color: var(--bone);
@@ -308,8 +311,9 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
 }
 .tale-blurb {
   color: var(--bone-dim);
-  margin-bottom: 18px;
+  margin-bottom: 0;
 }
+.tale-card > details.flashback { margin: 26px 0 0; }
 .tale-story-inner p { margin: 0 0 1.1em; }
 .tale-story-inner p:last-child { margin-bottom: 0; }
 .tale-scene-break {
@@ -321,10 +325,10 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
 }
 .tale-figure {
   float: left;
-  width: 42%;
+  width: min(42%, 340px);
   margin: 4px 22px 12px 0;
 }
-.tale-figure.right { float: right; margin: 4px 0 12px 22px; }
+.tale-figure.right { float: right; width: min(42%, 340px); margin: 4px 0 12px 22px; }
 .tale-figure img {
   display: block;
   width: 100%;
@@ -344,7 +348,7 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
   border-bottom: 1px solid rgba(207,154,76,0.25);
 }
 @media (max-width: 720px) {
-  .tale-card, .tale-card.reverse { flex-direction: column; }
+  .tale-top, .tale-card.reverse .tale-top { flex-direction: column; }
   .tale-cover { flex: none; max-width: 320px; }
   .tale-figure, .tale-figure.right { float: none; width: 70%; margin: 12px auto; }
   .tale-figure-full { margin: 20px -20px; }
