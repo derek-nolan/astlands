@@ -268,6 +268,100 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
   text-align: center;
   margin-top: 10px;
 }
+
+/* ---------------------------------------------------------
+   Tales of the Astlands
+   --------------------------------------------------------- */
+
+.tale-card {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 44px;
+  background: var(--leather);
+  border: 1px solid rgba(207,154,76,0.2);
+  padding: 28px;
+}
+.tale-card.reverse { flex-direction: row-reverse; }
+.tale-cover { flex: 0 0 260px; }
+.tale-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--brass);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.5);
+}
+.tale-content { flex: 1; min-width: 0; }
+.tale-content h3 {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--bone);
+  margin: 0 0 6px;
+  letter-spacing: 0.01em;
+}
+.tale-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 14px;
+}
+.tale-blurb {
+  color: var(--bone-dim);
+  margin-bottom: 18px;
+}
+.tale-story-inner p { margin: 0 0 1.1em; }
+.tale-story-inner p:last-child { margin-bottom: 0; }
+.tale-scene-break {
+  text-align: center;
+  color: var(--brass);
+  letter-spacing: 0.5em;
+  margin: 1.6em 0;
+  opacity: 0.7;
+}
+.tale-figure {
+  float: left;
+  width: 42%;
+  margin: 4px 22px 12px 0;
+}
+.tale-figure.right { float: right; margin: 4px 0 12px 22px; }
+.tale-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(207,154,76,0.25);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.45);
+}
+.tale-figure-full {
+  clear: both;
+  margin: 26px -28px;
+}
+.tale-figure-full img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid rgba(207,154,76,0.25);
+  border-bottom: 1px solid rgba(207,154,76,0.25);
+}
+@media (max-width: 720px) {
+  .tale-card, .tale-card.reverse { flex-direction: column; }
+  .tale-cover { flex: none; max-width: 320px; }
+  .tale-figure, .tale-figure.right { float: none; width: 70%; margin: 12px auto; }
+  .tale-figure-full { margin: 20px -20px; }
+}
+
+.source-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border: 1px solid;
+  margin-right: 6px;
+}
+.source-tag.campaign { color: var(--rust); border-color: var(--rust); }
+.source-tag.tale { color: var(--magicite); border-color: var(--magicite); }
 .divider::before, .divider::after {
   content: "";
   flex: 1;
