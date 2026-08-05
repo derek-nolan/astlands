@@ -368,6 +368,7 @@ nav.main-nav a.active { color: var(--rust); background: rgba(193,85,42,0.08); }
 .source-tag.tale { color: var(--magicite); border-color: var(--magicite); }
 .meta .source-tag { display: block; width: fit-content; margin: 0 0 8px; }
 .item > .source-tag { display: block; width: fit-content; margin: 0 0 8px; }
+.block > .source-tag { display: block; width: fit-content; margin: 0 0 10px; }
 .divider::before, .divider::after {
   content: "";
   flex: 1;
